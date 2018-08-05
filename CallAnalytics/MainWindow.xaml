@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0">
+            <MenuItem Header="File"></MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Add Group"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <DockPanel Grid.Row="1" Background="#FFC7C7C7">
+            <Button DockPanel.Dock="Right" Padding="10,1">Load</Button>
+            <Label DockPanel.Dock="Right" HorizontalAlignment="Right">Load File:</Label>
+        </DockPanel>
+        <DataGrid Grid.Row="2" Name="dgrdAnalyticResults" AutoGenerateColumns="False" ItemsSource="{Binding}" SelectionMode="Extended">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Average Response Time" Binding="{Binding AverageResponseTime}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
