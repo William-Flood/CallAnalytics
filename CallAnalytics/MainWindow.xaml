@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CallAnalytics"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Call Analytics" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -22,7 +22,7 @@
             </MenuItem>
         </Menu>
         <DockPanel Grid.Row="1" Background="#FFC7C7C7">
-            <Button DockPanel.Dock="Right" Padding="10,1">Load</Button>
+            <Button DockPanel.Dock="Right" Padding="10,1" Click="LoadFiles">Load</Button>
             <Label DockPanel.Dock="Right" HorizontalAlignment="Right">Load File:</Label>
         </DockPanel>
         <DataGrid Grid.Row="2" Name="dgrdAnalyticResults" AutoGenerateColumns="False" ItemsSource="{Binding}" SelectionMode="Extended">
