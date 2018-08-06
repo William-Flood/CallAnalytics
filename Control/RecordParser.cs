@@ -37,6 +37,11 @@ namespace Control
                         {
                             throw new Exception("Invalid line " + lineIndex + "in " + file);
                         }
+                        int testInt;
+                        if(2 > splitLine[1].Split(':').Length && !(Int32.TryParse(splitLine[1].Split(':')[0], out testInt) && Int32.TryParse(splitLine[1].Split(':')[1], out testInt)))
+                        {
+                            continue;
+                        }
                         if (HELPER_TITLE.Equals(splitLine[0]) && !HELPER_TITLE.Equals(lastSeenUser))
                         {
                             var hourAndMinute = splitLine[1].Split(':');
