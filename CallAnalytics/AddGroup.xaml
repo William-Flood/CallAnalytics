@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CallAnalytics"
         mc:Ignorable="d"
-        Title="AddGroup" Height="197.751" Width="251.903">
+        Title="Add Group" Height="197.751" Width="251.903">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
