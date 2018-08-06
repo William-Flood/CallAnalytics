@@ -35,11 +35,14 @@ namespace CallAnalytics
         {
             var fileDialog = new OpenFileDialog
             {
-                InitialDirectory = _settingsManager.LastSearchedFolder
+                InitialDirectory = _settingsManager.LastSearchedFolder,
+                Multiselect = true
             };
             fileDialog.ShowDialog();
             _settingsManager.LastSearchedFolder = Path.GetDirectoryName(fileDialog.FileName);
-
+            var analysisResults = RecordParser.Parse(fileDialog.FileNames);
+            dgrdAnalyticResults.DataContext = analysisResults;
+            dgrdAnalyticResults.Items.Refresh();
         }
     }
 }

@@ -28,7 +28,7 @@
         <DataGrid Grid.Row="2" Name="dgrdAnalyticResults" AutoGenerateColumns="False" ItemsSource="{Binding}" SelectionMode="Extended">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Average Response Time" Binding="{Binding AverageResponseTime}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Average Response Time" Binding="{Binding AverageResponseTimeText}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

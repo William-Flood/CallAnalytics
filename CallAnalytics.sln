@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallAnalytics", "CallAnalyt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control", "Control\Control.csproj", "{D0BFEA53-F80A-4EE0-9676-7EDCB3E79A8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObjects", "DataObjects\DataObjects.csproj", "{279BB837-425E-40AE-AF62-6F97A0725586}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D0BFEA53-F80A-4EE0-9676-7EDCB3E79A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0BFEA53-F80A-4EE0-9676-7EDCB3E79A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0BFEA53-F80A-4EE0-9676-7EDCB3E79A8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{279BB837-425E-40AE-AF62-6F97A0725586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279BB837-425E-40AE-AF62-6F97A0725586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279BB837-425E-40AE-AF62-6F97A0725586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279BB837-425E-40AE-AF62-6F97A0725586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
