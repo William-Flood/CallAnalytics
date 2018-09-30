@@ -35,7 +35,7 @@ namespace Control
                         var splitLine = line.Split(' ');
                         if (3 > splitLine.Length)
                         {
-                            throw new Exception("Invalid line " + lineIndex + "in " + file);
+                            throw new Exception("Invalid line " + lineIndex + " in " + file);
                         }
                         int testInt;
                         if(2 > splitLine[1].Split(':').Length && !(Int32.TryParse(splitLine[1].Split(':')[0], out testInt) && Int32.TryParse(splitLine[1].Split(':')[1], out testInt)))

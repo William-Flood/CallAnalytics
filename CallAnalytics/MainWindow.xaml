@@ -16,7 +16,9 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Menu Grid.Row="0" Grid.Column="0">
-            <MenuItem Header="File"></MenuItem>
+            <MenuItem Header="File" Click="SaveReport">
+                <MenuItem Header="Save"></MenuItem>
+            </MenuItem>
             <MenuItem Header="Edit">
                 <MenuItem Header="Add Group" Click="AssignGroup"></MenuItem>
             </MenuItem>

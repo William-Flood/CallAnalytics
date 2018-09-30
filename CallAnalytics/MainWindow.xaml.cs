@@ -46,7 +46,14 @@ namespace CallAnalytics
                 return;
             }
             _settingsManager.LastSearchedFolder = Path.GetDirectoryName(fileDialog.FileName);
-            analysisResults = RecordParser.Parse(fileDialog.FileNames);
+            try
+            {
+                analysisResults = RecordParser.Parse(fileDialog.FileNames);
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
             dgrdAnalyticResults.DataContext = analysisResults;
             dgrdAnalyticResults.Items.Refresh();
         }
@@ -91,6 +98,34 @@ namespace CallAnalytics
             analysisResults.Add(combinedGroupData);
             dgrdAnalyticResults.DataContext = analysisResults;
             dgrdAnalyticResults.Items.Refresh();
+        }
+
+        private void SaveReport(object sender, RoutedEventArgs e)
+        {
+            if(null != analysisResults && 0 < analysisResults.Count)
+            {
+                var fileDialog = new SaveFileDialog
+                {
+                    InitialDirectory = _settingsManager.LastSavedFolder
+                };
+                fileDialog.ShowDialog();
+                if (!fileDialog.FileName.Contains("."))
+                {
+                    fileDialog.FileName = fileDialog.FileName + ".txt";
+                }
+                try
+                {
+                    RecordSaver.SaveRecord(fileDialog.FileName, analysisResults);
+                    _settingsManager.LastSavedFolder = Path.GetDirectoryName(fileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } else
+            {
+                MessageBox.Show("Load data before saving a report");
+            }
         }
     }
 }
